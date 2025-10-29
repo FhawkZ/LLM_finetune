@@ -1,0 +1,411 @@
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file vocab.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file merges.txt
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file tokenizer.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file added_tokens.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file special_tokens_map.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file tokenizer_config.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file chat_template.jinja
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2323 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|2025-10-28 10:09:41] configuration_utils.py:691 >> loading configuration file /root/autodl-tmp/Qwen3-8B-AWQ/config.json
+[INFO|2025-10-28 10:09:41] configuration_utils.py:765 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 12288,
+  "max_position_embeddings": 40960,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "quantization_config": {
+    "backend": "autoawq",
+    "bits": 4,
+    "do_fuse": false,
+    "exllama_config": null,
+    "fuse_max_seq_len": null,
+    "group_size": 128,
+    "modules_to_fuse": null,
+    "modules_to_not_convert": null,
+    "quant_method": "awq",
+    "version": "gemm",
+    "zero_point": true
+  },
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.51.3",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file vocab.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file merges.txt
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file tokenizer.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file added_tokens.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file special_tokens_map.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file tokenizer_config.json
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2058 >> loading file chat_template.jinja
+[INFO|2025-10-28 10:09:41] tokenization_utils_base.py:2323 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|2025-10-28 10:09:41] logging.py:143 >> Loading dataset /root/autodl-tmp/LLaMA-Factory/data/train_random_half.jsonl...
+[INFO|2025-10-28 10:09:47] configuration_utils.py:691 >> loading configuration file /root/autodl-tmp/Qwen3-8B-AWQ/config.json
+[INFO|2025-10-28 10:09:47] configuration_utils.py:765 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 12288,
+  "max_position_embeddings": 40960,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "quantization_config": {
+    "backend": "autoawq",
+    "bits": 4,
+    "do_fuse": false,
+    "exllama_config": null,
+    "fuse_max_seq_len": null,
+    "group_size": 128,
+    "modules_to_fuse": null,
+    "modules_to_not_convert": null,
+    "quant_method": "awq",
+    "version": "gemm",
+    "zero_point": true
+  },
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.51.3",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2025-10-28 10:09:47] logging.py:143 >> Loading 4-bit AWQ-quantized model.
+[INFO|2025-10-28 10:09:47] logging.py:143 >> KV cache is disabled during training.
+[WARNING|2025-10-28 10:09:47] quantizer_awq.py:96 >> We suggest you to set `torch_dtype=torch.float16` for better efficiency with AWQ.
+[INFO|2025-10-28 10:09:47] modeling_utils.py:1121 >> loading weights file /root/autodl-tmp/Qwen3-8B-AWQ/model.safetensors.index.json
+[INFO|2025-10-28 10:09:47] modeling_utils.py:2167 >> Instantiating Qwen3ForCausalLM model under default dtype torch.bfloat16.
+[INFO|2025-10-28 10:09:47] configuration_utils.py:1142 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "use_cache": false
+}
+
+[INFO|2025-10-28 10:09:50] modeling_utils.py:4930 >> All model checkpoint weights were used when initializing Qwen3ForCausalLM.
+
+[INFO|2025-10-28 10:09:50] modeling_utils.py:4938 >> All the weights of Qwen3ForCausalLM were initialized from the model checkpoint at /root/autodl-tmp/Qwen3-8B-AWQ.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Qwen3ForCausalLM for predictions without further training.
+[INFO|2025-10-28 10:09:50] configuration_utils.py:1095 >> loading configuration file /root/autodl-tmp/Qwen3-8B-AWQ/generation_config.json
+[INFO|2025-10-28 10:09:50] configuration_utils.py:1142 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.6,
+  "top_k": 20,
+  "top_p": 0.95
+}
+
+[INFO|2025-10-28 10:09:50] logging.py:143 >> Gradient checkpointing enabled.
+[INFO|2025-10-28 10:09:50] logging.py:143 >> Using torch SDPA for faster training and inference.
+[INFO|2025-10-28 10:09:50] logging.py:143 >> Upcasting trainable params to float32.
+[INFO|2025-10-28 10:09:50] logging.py:143 >> Fine-tuning method: LoRA
+[INFO|2025-10-28 10:09:50] logging.py:143 >> Found linear modules: q_proj,k_proj,down_proj,v_proj,up_proj,o_proj,gate_proj
+[INFO|2025-10-28 10:09:50] logging.py:143 >> trainable params: 21,823,488 || all params: 1,266,791,424 || trainable%: 1.7227
+[INFO|2025-10-28 10:09:50] trainer.py:748 >> Using auto half precision backend
+[INFO|2025-10-28 10:09:50] trainer.py:2414 >> ***** Running training *****
+[INFO|2025-10-28 10:09:50] trainer.py:2415 >>   Num examples = 7,920
+[INFO|2025-10-28 10:09:50] trainer.py:2416 >>   Num Epochs = 1
+[INFO|2025-10-28 10:09:50] trainer.py:2417 >>   Instantaneous batch size per device = 4
+[INFO|2025-10-28 10:09:50] trainer.py:2420 >>   Total train batch size (w. parallel, distributed & accumulation) = 32
+[INFO|2025-10-28 10:09:50] trainer.py:2421 >>   Gradient Accumulation steps = 8
+[INFO|2025-10-28 10:09:50] trainer.py:2422 >>   Total optimization steps = 247
+[INFO|2025-10-28 10:09:50] trainer.py:2423 >>   Number of trainable parameters = 21,823,488
+[INFO|2025-10-28 10:12:41] logging.py:143 >> {'loss': 0.5038, 'learning_rate': 4.9968e-07, 'epoch': 0.02, 'throughput': 753.62}
+[INFO|2025-10-28 10:15:07] logging.py:143 >> {'loss': 0.4974, 'learning_rate': 4.9836e-07, 'epoch': 0.04, 'throughput': 809.68}
+[INFO|2025-10-28 10:16:33] logging.py:143 >> {'loss': 0.4984, 'learning_rate': 4.9605e-07, 'epoch': 0.06, 'throughput': 955.03}
+[INFO|2025-10-28 10:18:01] logging.py:143 >> {'loss': 0.4949, 'learning_rate': 4.9274e-07, 'epoch': 0.08, 'throughput': 1052.29}
+[INFO|2025-10-28 10:19:28] logging.py:143 >> {'loss': 0.5005, 'learning_rate': 4.8844e-07, 'epoch': 0.10, 'throughput': 1118.98}
+[INFO|2025-10-28 10:20:55] logging.py:143 >> {'loss': 0.4993, 'learning_rate': 4.8319e-07, 'epoch': 0.12, 'throughput': 1168.78}
+[INFO|2025-10-28 10:22:22] logging.py:143 >> {'loss': 0.4785, 'learning_rate': 4.7699e-07, 'epoch': 0.14, 'throughput': 1206.91}
+[INFO|2025-10-28 10:23:48] logging.py:143 >> {'loss': 0.4802, 'learning_rate': 4.6987e-07, 'epoch': 0.16, 'throughput': 1235.79}
+[INFO|2025-10-28 10:25:16] logging.py:143 >> {'loss': 0.4924, 'learning_rate': 4.6186e-07, 'epoch': 0.18, 'throughput': 1260.72}
+[INFO|2025-10-28 10:26:43] logging.py:143 >> {'loss': 0.4949, 'learning_rate': 4.5300e-07, 'epoch': 0.20, 'throughput': 1280.41}
+[INFO|2025-10-28 10:28:08] logging.py:143 >> {'loss': 0.4979, 'learning_rate': 4.4332e-07, 'epoch': 0.22, 'throughput': 1296.59}
+[INFO|2025-10-28 10:29:34] logging.py:143 >> {'loss': 0.4911, 'learning_rate': 4.3285e-07, 'epoch': 0.24, 'throughput': 1310.76}
+[INFO|2025-10-28 10:31:01] logging.py:143 >> {'loss': 0.4867, 'learning_rate': 4.2165e-07, 'epoch': 0.26, 'throughput': 1322.95}
+[INFO|2025-10-28 10:32:27] logging.py:143 >> {'loss': 0.4816, 'learning_rate': 4.0975e-07, 'epoch': 0.28, 'throughput': 1333.48}
+[INFO|2025-10-28 10:33:54] logging.py:143 >> {'loss': 0.4939, 'learning_rate': 3.9720e-07, 'epoch': 0.30, 'throughput': 1343.25}
+[INFO|2025-10-28 10:35:21] logging.py:143 >> {'loss': 0.4804, 'learning_rate': 3.8406e-07, 'epoch': 0.32, 'throughput': 1351.88}
+[INFO|2025-10-28 10:36:47] logging.py:143 >> {'loss': 0.4818, 'learning_rate': 3.7038e-07, 'epoch': 0.34, 'throughput': 1359.21}
+[INFO|2025-10-28 10:38:13] logging.py:143 >> {'loss': 0.4875, 'learning_rate': 3.5621e-07, 'epoch': 0.36, 'throughput': 1366.02}
+[INFO|2025-10-28 10:39:40] logging.py:143 >> {'loss': 0.4857, 'learning_rate': 3.4162e-07, 'epoch': 0.38, 'throughput': 1372.08}
+[INFO|2025-10-28 10:41:06] logging.py:143 >> {'loss': 0.4848, 'learning_rate': 3.2665e-07, 'epoch': 0.40, 'throughput': 1377.58}
+[INFO|2025-10-28 10:41:06] trainer.py:4307 >> 
+***** Running Evaluation *****
+[INFO|2025-10-28 10:41:06] trainer.py:4309 >>   Num examples = 80
+[INFO|2025-10-28 10:41:06] trainer.py:4312 >>   Batch size = 4
+[INFO|2025-10-28 10:41:30] trainer.py:3984 >> Saving model checkpoint to saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/checkpoint-100
+[INFO|2025-10-28 10:41:30] configuration_utils.py:691 >> loading configuration file /root/autodl-tmp/Qwen3-8B-AWQ/config.json
+[INFO|2025-10-28 10:41:30] configuration_utils.py:765 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 12288,
+  "max_position_embeddings": 40960,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "quantization_config": {
+    "backend": "autoawq",
+    "bits": 4,
+    "do_fuse": false,
+    "exllama_config": null,
+    "fuse_max_seq_len": null,
+    "group_size": 128,
+    "modules_to_fuse": null,
+    "modules_to_not_convert": null,
+    "quant_method": "awq",
+    "version": "gemm",
+    "zero_point": true
+  },
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.51.3",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2025-10-28 10:41:30] tokenization_utils_base.py:2510 >> tokenizer config file saved in saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/checkpoint-100/tokenizer_config.json
+[INFO|2025-10-28 10:41:30] tokenization_utils_base.py:2519 >> Special tokens file saved in saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/checkpoint-100/special_tokens_map.json
+[INFO|2025-10-28 10:42:58] logging.py:143 >> {'loss': 0.4752, 'learning_rate': 3.1137e-07, 'epoch': 0.42, 'throughput': 1365.83}
+[INFO|2025-10-28 10:44:25] logging.py:143 >> {'loss': 0.4771, 'learning_rate': 2.9585e-07, 'epoch': 0.44, 'throughput': 1371.21}
+[INFO|2025-10-28 10:45:50] logging.py:143 >> {'loss': 0.4722, 'learning_rate': 2.8013e-07, 'epoch': 0.46, 'throughput': 1375.74}
+[INFO|2025-10-28 10:47:17] logging.py:143 >> {'loss': 0.4806, 'learning_rate': 2.6430e-07, 'epoch': 0.48, 'throughput': 1380.21}
+[INFO|2025-10-28 10:48:43] logging.py:143 >> {'loss': 0.4739, 'learning_rate': 2.4841e-07, 'epoch': 0.51, 'throughput': 1384.57}
+[INFO|2025-10-28 10:50:09] logging.py:143 >> {'loss': 0.4695, 'learning_rate': 2.3253e-07, 'epoch': 0.53, 'throughput': 1388.42}
+[INFO|2025-10-28 10:51:36] logging.py:143 >> {'loss': 0.4601, 'learning_rate': 2.1671e-07, 'epoch': 0.55, 'throughput': 1392.16}
+[INFO|2025-10-28 10:53:04] logging.py:143 >> {'loss': 0.4664, 'learning_rate': 2.0103e-07, 'epoch': 0.57, 'throughput': 1395.62}
+[INFO|2025-10-28 10:54:31] logging.py:143 >> {'loss': 0.4645, 'learning_rate': 1.8555e-07, 'epoch': 0.59, 'throughput': 1398.99}
+[INFO|2025-10-28 10:55:58] logging.py:143 >> {'loss': 0.4596, 'learning_rate': 1.7033e-07, 'epoch': 0.61, 'throughput': 1401.92}
+[INFO|2025-10-28 10:57:24] logging.py:143 >> {'loss': 0.4604, 'learning_rate': 1.5543e-07, 'epoch': 0.63, 'throughput': 1404.73}
+[INFO|2025-10-28 10:58:51] logging.py:143 >> {'loss': 0.4569, 'learning_rate': 1.4092e-07, 'epoch': 0.65, 'throughput': 1407.38}
+[INFO|2025-10-28 11:00:17] logging.py:143 >> {'loss': 0.4588, 'learning_rate': 1.2684e-07, 'epoch': 0.67, 'throughput': 1409.85}
+[INFO|2025-10-28 11:01:43] logging.py:143 >> {'loss': 0.4484, 'learning_rate': 1.1326e-07, 'epoch': 0.69, 'throughput': 1412.16}
+[INFO|2025-10-28 11:03:10] logging.py:143 >> {'loss': 0.4686, 'learning_rate': 1.0024e-07, 'epoch': 0.71, 'throughput': 1414.40}
+[INFO|2025-10-28 11:04:37] logging.py:143 >> {'loss': 0.4629, 'learning_rate': 8.7819e-08, 'epoch': 0.73, 'throughput': 1416.51}
+[INFO|2025-10-28 11:06:02] logging.py:143 >> {'loss': 0.4621, 'learning_rate': 7.6056e-08, 'epoch': 0.75, 'throughput': 1418.36}
+[INFO|2025-10-28 11:07:29] logging.py:143 >> {'loss': 0.4749, 'learning_rate': 6.4996e-08, 'epoch': 0.77, 'throughput': 1420.29}
+[INFO|2025-10-28 11:08:56] logging.py:143 >> {'loss': 0.4479, 'learning_rate': 5.4684e-08, 'epoch': 0.79, 'throughput': 1422.00}
+[INFO|2025-10-28 11:10:22] logging.py:143 >> {'loss': 0.4595, 'learning_rate': 4.5161e-08, 'epoch': 0.81, 'throughput': 1423.53}
+[INFO|2025-10-28 11:10:22] trainer.py:4307 >> 
+***** Running Evaluation *****
+[INFO|2025-10-28 11:10:22] trainer.py:4309 >>   Num examples = 80
+[INFO|2025-10-28 11:10:22] trainer.py:4312 >>   Batch size = 4
+[INFO|2025-10-28 11:10:46] trainer.py:3984 >> Saving model checkpoint to saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/checkpoint-200
+[INFO|2025-10-28 11:10:46] configuration_utils.py:691 >> loading configuration file /root/autodl-tmp/Qwen3-8B-AWQ/config.json
+[INFO|2025-10-28 11:10:46] configuration_utils.py:765 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 12288,
+  "max_position_embeddings": 40960,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "quantization_config": {
+    "backend": "autoawq",
+    "bits": 4,
+    "do_fuse": false,
+    "exllama_config": null,
+    "fuse_max_seq_len": null,
+    "group_size": 128,
+    "modules_to_fuse": null,
+    "modules_to_not_convert": null,
+    "quant_method": "awq",
+    "version": "gemm",
+    "zero_point": true
+  },
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.51.3",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2025-10-28 11:10:46] tokenization_utils_base.py:2510 >> tokenizer config file saved in saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/checkpoint-200/tokenizer_config.json
+[INFO|2025-10-28 11:10:46] tokenization_utils_base.py:2519 >> Special tokens file saved in saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/checkpoint-200/special_tokens_map.json
+[INFO|2025-10-28 11:12:12] logging.py:143 >> {'loss': 0.4650, 'learning_rate': 3.6467e-08, 'epoch': 0.83, 'throughput': 1415.93}
+[INFO|2025-10-28 11:13:39] logging.py:143 >> {'loss': 0.4627, 'learning_rate': 2.8636e-08, 'epoch': 0.85, 'throughput': 1417.72}
+[INFO|2025-10-28 11:15:06] logging.py:143 >> {'loss': 0.4500, 'learning_rate': 2.1700e-08, 'epoch': 0.87, 'throughput': 1419.41}
+[INFO|2025-10-28 11:16:33] logging.py:143 >> {'loss': 0.4538, 'learning_rate': 1.5687e-08, 'epoch': 0.89, 'throughput': 1420.97}
+[INFO|2025-10-28 11:18:00] logging.py:143 >> {'loss': 0.4639, 'learning_rate': 1.0621e-08, 'epoch': 0.91, 'throughput': 1422.55}
+[INFO|2025-10-28 11:19:25] logging.py:143 >> {'loss': 0.4650, 'learning_rate': 6.5232e-09, 'epoch': 0.93, 'throughput': 1423.90}
+[INFO|2025-10-28 11:20:52] logging.py:143 >> {'loss': 0.4598, 'learning_rate': 3.4097e-09, 'epoch': 0.95, 'throughput': 1425.32}
+[INFO|2025-10-28 11:22:19] logging.py:143 >> {'loss': 0.4667, 'learning_rate': 1.2931e-09, 'epoch': 0.97, 'throughput': 1426.66}
+[INFO|2025-10-28 11:23:47] logging.py:143 >> {'loss': 0.4439, 'learning_rate': 1.8197e-10, 'epoch': 0.99, 'throughput': 1428.19}
+[INFO|2025-10-28 11:24:22] trainer.py:3984 >> Saving model checkpoint to saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/checkpoint-247
+[INFO|2025-10-28 11:24:22] configuration_utils.py:691 >> loading configuration file /root/autodl-tmp/Qwen3-8B-AWQ/config.json
+[INFO|2025-10-28 11:24:22] configuration_utils.py:765 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 12288,
+  "max_position_embeddings": 40960,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "quantization_config": {
+    "backend": "autoawq",
+    "bits": 4,
+    "do_fuse": false,
+    "exllama_config": null,
+    "fuse_max_seq_len": null,
+    "group_size": 128,
+    "modules_to_fuse": null,
+    "modules_to_not_convert": null,
+    "quant_method": "awq",
+    "version": "gemm",
+    "zero_point": true
+  },
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.51.3",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2025-10-28 11:24:22] tokenization_utils_base.py:2510 >> tokenizer config file saved in saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/checkpoint-247/tokenizer_config.json
+[INFO|2025-10-28 11:24:22] tokenization_utils_base.py:2519 >> Special tokens file saved in saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/checkpoint-247/special_tokens_map.json
+[INFO|2025-10-28 11:24:22] trainer.py:2681 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+[INFO|2025-10-28 11:24:22] trainer.py:3984 >> Saving model checkpoint to saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54
+[INFO|2025-10-28 11:24:22] configuration_utils.py:691 >> loading configuration file /root/autodl-tmp/Qwen3-8B-AWQ/config.json
+[INFO|2025-10-28 11:24:22] configuration_utils.py:765 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 12288,
+  "max_position_embeddings": 40960,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "quantization_config": {
+    "backend": "autoawq",
+    "bits": 4,
+    "do_fuse": false,
+    "exllama_config": null,
+    "fuse_max_seq_len": null,
+    "group_size": 128,
+    "modules_to_fuse": null,
+    "modules_to_not_convert": null,
+    "quant_method": "awq",
+    "version": "gemm",
+    "zero_point": true
+  },
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.51.3",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2025-10-28 11:24:22] tokenization_utils_base.py:2510 >> tokenizer config file saved in saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/tokenizer_config.json
+[INFO|2025-10-28 11:24:22] tokenization_utils_base.py:2519 >> Special tokens file saved in saves/Qwen3-8B-Thinking-AWQ/lora/train_2025-10-28-10-08-54/special_tokens_map.json
+[INFO|2025-10-28 11:24:22] trainer.py:4307 >> 
+***** Running Evaluation *****
+[INFO|2025-10-28 11:24:22] trainer.py:4309 >>   Num examples = 80
+[INFO|2025-10-28 11:24:22] trainer.py:4312 >>   Batch size = 4
+[INFO|2025-10-28 11:24:46] modelcard.py:450 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}
