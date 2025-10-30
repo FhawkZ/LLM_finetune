@@ -25,10 +25,13 @@ def inference(args):
     )
     model = PeftModel.from_pretrained(model, args.output_dir)
     model.eval()
+
+    # For generation, move model to a single device if needed
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
     
     raw_test = read_jsonl(args.test_file)
+    # raw_test = raw_test[:100]
 
     answers = []
     golds = []
@@ -42,10 +45,13 @@ def inference(args):
                 ans = ans[ans.find("response: "):]
             answers.append(ans.strip())
         
-        golds.extend([item["answer"][0] for item in batch])
+        golds.extend([item["answer"] for item in batch])
         
     with open("answer_.json", "w") as f:
         json.dump(answers, f, indent=4)
+    
+    # with open("answer_.json", "r") as f:
+    #     answers = json.load(f)
         
     batch_sub_exact_match_score = batch_sub_exact_match(answers, golds)
     dataset_level_f1_score = dataset_level_f1(answers, golds)
@@ -58,10 +64,10 @@ def inference(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name_or_path", type=str, default="path-to-model", help="Path or HF id for Qwen3-8B-AWQ checkpoint")
-    parser.add_argument("--train_file", type=str, default="path-to-train-data", help="train.jsonl path")
-    parser.add_argument("--test_file", type=str, default="path-to-test-data", help="test.jsonl path")
-    parser.add_argument("--output_dir", type=str, default="path-to-save-model")
+    parser.add_argument("--model_name_or_path", type=str, default="/home/liangzhilin/model/qwen3-8b-awq", help="Path or HF id for Qwen3-8B-AWQ checkpoint")
+    parser.add_argument("--train_file", type=str, default="/home/liangzhilin/workspace/25AICourse/train_top5.json", help="train.jsonl path")
+    parser.add_argument("--test_file", type=str, default="/home/liangzhilin/workspace/25AICourse/test_top5.json", help="test.jsonl path")
+    parser.add_argument("--output_dir", type=str, default="/home/liangzhilin/orpo_output_")
     parser.add_argument("--num_train_epochs", type=int, default=1)
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--max_length", type=int, default=1024)
